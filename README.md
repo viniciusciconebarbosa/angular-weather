@@ -4,6 +4,21 @@ Aplicação de previsão do tempo desenvolvida com Angular, oferecendo animaçõ
 
 ## Configuração do Ambiente
 
+
+## APIs Necessárias
+
+Esta aplicação requer duas APIs:
+
+1. **API Ninja Geocoding** - Para busca de localizações
+   - Registre-se em [API Ninja](https://api-ninjas.com/)
+   - Obtenha sua chave de API gratuita
+
+2. **Google Weather API** - Para dados de previsão do tempo
+   - Configure o [Google Cloud Console](https://console.cloud.google.com/)
+   - Habilite a API Weather
+   - Crie uma chave de API
+
+
 Existem duas maneiras de configurar as variáveis de ambiente neste projeto:
 
 ### Opção 1: Usando arquivos environment.ts
@@ -48,18 +63,6 @@ Existem duas maneiras de configurar as variáveis de ambiente neste projeto:
 
 > **Importante**: Os arquivos `environment.ts`, `environment.prod.ts` e `.env` estão no `.gitignore` para evitar expor suas chaves de API no repositório. Nunca compartilhe ou cometa esses arquivos.
 
-## APIs Necessárias
-
-Esta aplicação requer duas APIs:
-
-1. **API Ninja Geocoding** - Para busca de localizações
-   - Registre-se em [API Ninja](https://api-ninjas.com/)
-   - Obtenha sua chave de API gratuita
-
-2. **Google Weather API** - Para dados de previsão do tempo
-   - Configure o [Google Cloud Console](https://console.cloud.google.com/)
-   - Habilite a API Weather
-   - Crie uma chave de API
 
 ## Instalação
 
