@@ -4,7 +4,10 @@ const path = require('path');
 module.exports = {
   plugins: [
     new Dotenv({
-      systemvars: true // Para pegar variáveis de ambiente do sistema também
+      path: '.env',
+      safe: true,
+      systemvars: true,
+      defaults: true
     })
   ]
 }; 

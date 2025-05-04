@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "setup-env": "cp src/environment.example.ts src/environment.ts && cp src/environment.example.ts src/environment.prod.ts && echo 'Environment files created! Edit them with your API keys.'"

@@ -23,11 +23,11 @@ export class WeatherService {
           throw new Error('Formato de resposta inválido da API de previsão do tempo');
         }
 
-        console.log('API Response:', JSON.stringify(response.forecastDays[0]));
+       
 
         const forecast = response.forecastDays.map((day: any) => {
           const condition = day.daytimeForecast?.weatherCondition?.type || 'UNKNOWN';
-          console.log('Weather condition type:', condition);
+          
           return {
             date: this.formatDate(day.displayDate),
             weatherCondition: this.getWeatherCondition(condition),
