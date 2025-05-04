@@ -7,12 +7,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "GEOCODING_API_KEY": "@geocoding_api_key",
-    "WEATHER_API_KEY": "@weather_api_key",
-    "GEOCODING_API_URL": "@geocoding_api_url",
-    "WEATHER_API_URL": "@weather_api_url",
-    "DEFAULT_DAYS": "@default_days"
-  }
+  ]
 }
