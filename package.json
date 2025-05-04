@@ -8,7 +8,7 @@
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "setup-env": "cp src/environment.example.ts src/environment.ts && cp src/environment.example.ts src/environment.prod.ts && echo 'Environment files created! Edit them with your API keys.'"
+    "setup-env": "cp src/environments/environment.example.ts src/environments/environment.ts && cp src/environments/environment.example.ts src/environments/environment.prod.ts && echo 'Environment files created! Edit them with your API keys.'"
   },
   "dependencies": {
     "@angular/animations": "^19.2.0",
@@ -19,17 +19,18 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/router": "^19.2.0",
     "axios": "^1.7.2",
-    "dotenv": "^16.5.0",
     "rxjs": "^7.8.1",
     "tslib": "^2.5.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^19.2.10",
     "@angular/build": "^19.2.0",
     "@angular/cli": "^19.2.0",
     "@angular/compiler-cli": "^19.2.0",
+    "@ngx-env/builder": "^19.0.4",
     "@types/node": "^22.15.3",
-    "dotenv-webpack": "^8.1.0",
+    "dotenv": "^16.5.0",
     "typescript": "^5.8.2"
   }
 }

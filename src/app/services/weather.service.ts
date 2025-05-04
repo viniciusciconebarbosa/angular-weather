@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, catchError, throwError } from 'rxjs';
 import { WeatherData, WeatherDay } from '../models/weather.model';
-import { environment } from '../../environment';
+import { environment } from '../../environments/environment';
 import { IconService } from './icon.service';
 
 @Injectable({
