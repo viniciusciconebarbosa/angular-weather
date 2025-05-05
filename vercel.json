@@ -1,30 +1,47 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "dist/demo/**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "buildCommand": "npm run build:prod",
   "outputDirectory": "dist/demo",
   "routes": [
     {
-      "src": "/(assets/.+)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "dest": "/$1"
+      "src": "/assets/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/assets/$1"
     },
     {
-      "src": "/(.+\\.(?:js|css|ico|json|txt|html|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/(.*\\.(js|css|json|txt|html|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot))",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
       "dest": "/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8"
+      }
     }
   ],
   "headers": [
     {
-      "source": "/(.*)\\.js",
+      "source": "/.+\\.js$",
       "headers": [
         {
           "key": "Content-Type",
-          "value": "application/javascript; charset=utf-8"
+          "value": "application/javascript"
         }
       ]
     }
