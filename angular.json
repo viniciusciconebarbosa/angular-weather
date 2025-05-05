@@ -44,6 +44,7 @@
             "assets": ["src/assets"],
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "/",
             "outputPath": "dist/demo",
             "polyfills": ["zone.js"],
             "scripts": [],
