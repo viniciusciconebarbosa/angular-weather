@@ -8,7 +8,7 @@
     "demo": {
       "architect": {
         "build": {
-          "builder": "@ngx-env/builder:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "configurations": {
             "development": {
               "extractLicenses": false,
@@ -38,6 +38,9 @@
             }
           },
           "options": {
+            "customWebpackConfig": {
+              "path": "src/custom-webpack.config.ts"
+            },
             "assets": ["src/assets"],
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -49,7 +52,7 @@
           }
         },
         "serve": {
-          "builder": "@ngx-env/builder:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "development": {
               "buildTarget": "demo:build:development"
