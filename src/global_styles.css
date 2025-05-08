@@ -12,9 +12,9 @@
   --background-card: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.1);
   --shadow-color-strong: rgba(0, 0, 0, 0.15);
-  --error-color: #ef4444;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
+  --error-color: #f52323;
+  --success-color: #0e9266;
+  --warning-color: #c17f0e;
   --border-radius: 16px;
   --border-radius-sm: 8px;
   --spacing-unit: 8px;
